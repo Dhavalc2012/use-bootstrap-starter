@@ -1,129 +1,35 @@
 <template>
  <Navbar
   expand="lg"
-  background-color="white"
+  background-color="body-tertiary"
  >
-  <Container>
-   <NavbarBrand
-    href="/"
-    aria-label="use bootstrap"
-   >
-    <img
-     src="~/assets/img/logo1.svg"
-     height="30"
-     alt="Logo"
-    >
+  <Container type="fluid">
+   <NavbarBrand >
+   <b-button target="#MainNavBar" toggle="collpase">
+    Navbar
+   </b-button>
    </NavbarBrand>
-   <NavbarToggler />
-   <NavbarCollapse>
-    <NavbarNavList margin="e-auto">
+   <NavbarToggler target="#MainNavBar" toggle="collpase" />
+   <NavbarCollapse id="MainNavBar">
+    <NavbarNavList>
      <NavItem>
       <NavLink
-       to="/docs"
-       padding="x-0 x-lg-2"
+       active
+       to="/"
+       aria-current="page"
       >
-       Docs
+       Home
       </NavLink>
      </NavItem>
-     <NavItemDropdown>
-      <NavItemDropdownToggle>
-       UseBootstrap
-      </NavItemDropdownToggle>
-      <DropdownMenu
-       mega
-       relative-width="100"
-       background-color="transparent"
-       border-subtractive
-       class="animated animated-fade-in"
-      >
-       <Container>
-        <Row
-         background-color="white"
-         shadow
-         gutter="0"
-        >
-         <Col col="lg-6">
-          <Background
-           background-color="primary-subtle"
-           overlay-color="pink-500"
-           overlay-alpha="0.5"
-           z="1"
-           padding="5"
-           relative-height="100"
-          >
-           <b-div headings="2">
-            Bootstrap
-           </b-div>
-           <p>
-            Bootstrap is a powerful, feature-packed frontend toolkit. Build anything—from
-            prototype to production—in minutes.
-           </p>
-           <Anchor
-            color="primary"
-            to="https://usebootstrap.org/"
-            icon="bi-chevron-right"
-            icon-end
-           >
-            Learn more
-           </Anchor>
-          </Background>
-         </Col>
-         <Col
-          col="lg-6"
-          padding="3"
-         >
-          <DropdownItem
-           header
-           href="https://usebootstrap.org/lang-en"
-           target="_blank"
-           icon="bi-chevron-right"
-           icon-end
-          >
-           Bootstrap
-          </DropdownItem>
-          <DropdownItem
-           header
-           href="https://usebootstrap.org/lang-en/extend"
-           target="_blank"
-           icon="bi-chevron-right"
-           icon-end
-          >
-           Extend
-          </DropdownItem>
-         </Col>
-        </Row>
-       </Container>
-      </DropdownMenu>
-     </NavItemDropdown>
-    </NavbarNavList>
-    <NavbarNavList
-     flex-direction="row"
-     flex-wrap="wrap"
-     margin="s-md-auto"
-    >
-     <NavItem
-      padding="y-2"
-      col="12 lg-auto"
-     >
-      <Vr
-       display="none lg-flex"
-       relative-height="100"
-       margin="x-lg-2"
-       text-color="black-50"
-      />
-      <hr class="d-lg-none my-2 text-black-50">
+     <NavItem>
+     <NavLink to="/sample-page">Sample Page</NavLink>
      </NavItem>
-     <NavItem col="6 lg-auto">
+     <NavItem>
       <NavLink
-       pdding="y-2 x-0 x-lg-2"
-       to="https://github.com/simplise/use-bootstrap"
-       target="_blank"
-       rel="noopener"
+       disabled
+       aria-current="page"
       >
-       <Icon
-        name="bi:github"
-        class="navbar-nav-svg"
-       />
+       Disabled
       </NavLink>
      </NavItem>
     </NavbarNavList>
