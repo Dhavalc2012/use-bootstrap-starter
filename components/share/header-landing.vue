@@ -4,35 +4,21 @@
   background-color="body-tertiary"
  >
   <Container type="fluid">
-   <NavbarBrand >
-   <b-button target="#MainNavBar" toggle="collpase">
-    Navbar
-   </b-button>
-   </NavbarBrand>
-   <NavbarToggler target="#MainNavBar" toggle="collpase" />
-   <NavbarCollapse id="MainNavBar">
-    <NavbarNavList>
-     <NavItem>
-      <NavLink
-       active
-       to="/"
-       aria-current="page"
-      >
+   <NavbarBrand>Navbar</NavbarBrand>
+   <NavbarToggler target="#navBarCollapse" toggle="collapse" />
+   <NavbarCollapse id="navBarCollapse">
+    <NavbarNav>
+     <NavLink to="/" active>
        Home
-      </NavLink>
-     </NavItem>
-     <NavItem>
-     <NavLink to="/sample-page">Sample Page</NavLink>
-     </NavItem>
-     <NavItem>
-      <NavLink
-       disabled
-       aria-current="page"
-      >
-       Disabled
-      </NavLink>
-     </NavItem>
-    </NavbarNavList>
+     </NavLink>
+     <NavLink to="/sample-page">
+      Sample Page
+     </NavLink>
+     <NavLink>Pricing</NavLink>
+     <NavLink disabled>
+      Disabled
+     </NavLink>
+    </NavbarNav>
    </NavbarCollapse>
   </Container>
  </Navbar>

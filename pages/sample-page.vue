@@ -1,7 +1,7 @@
 <template>
  <NuxtLayout name="landing">
   <Container margin="t-5">
-  <b-button target="#MainNavBar" hide="collpase">
+  <b-button target="#navBarCollapse" hide="collapse">
     Click Here to Hide NavBar
    </b-button>
   <NuxtLink
